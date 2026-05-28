@@ -1,0 +1,3 @@
+mode_a,mode_b,dpll_sat_total,compared,a_only,b_only,both,neither,net_gain_b_over_a,exact_p_value
+greedy_L,greedy_LG,31,31,5,9,13,4,4,0.4239501953125
+lookahead_L_3,lookahead_LG_3,31,31,0,9,22,0,9,0.00390625

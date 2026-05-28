@@ -1,0 +1,4 @@
+n_vars,samples,avg_cluster_count,avg_chosen_cluster_size,avg_IG,avg_R_est_survival,avg_useful_IG,avg_forced,avg_sat_clauses,avg_unknown_clauses,avg_unsat_clauses,D_pred,conflicts
+100,5,33.6,8.0,21.0,1.0,21.0,13.0,125.4,301.6,0.0,4.761904761904762,0
+200,5,68.6,8.0,16.6,1.0,16.6,8.6,105.2,748.8,0.0,12.048192771084336,0
+500,5,168.4,8.0,11.2,1.0,11.2,3.2,70.8,2064.2,0.0,44.642857142857146,0

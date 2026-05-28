@@ -1,0 +1,6 @@
+mode,total,success,fail,skipped,sat_found,unsat_proved,timeout,failed_to_find,success_rate,avg_steps_success_only,avg_steps_all,avg_steps_non_skipped,avg_decision_steps,avg_forced_steps,avg_score_calls,min_steps_success,max_steps_success
+dpll_control,40,31,9,0,31,9,0,0,0.775,8.161290322580646,9.75,9.75,9.75,1.075,0.0,3,20
+greedy_L,40,18,22,0,18,0,0,22,0.45,10.555555555555555,13.425,13.425,13.425,0.0,251.4,2,15
+greedy_LG,40,22,18,0,22,0,0,18,0.55,2.9545454545454546,7.75,7.75,5.475,8.925,108.375,2,4
+lookahead_LG_3,40,31,9,0,31,0,0,9,0.775,5.483870967741935,7.225,7.225,6.275,8.3,16162.3,2,9
+lookahead_L_3,40,22,18,0,22,0,0,18,0.55,14.181818181818182,14.1,14.1,14.1,0.0,29774.775,5,16

@@ -1,0 +1,2 @@
+formula_seed,n_vars,n_clauses,brute_checked,brute_sat,dpll_success,dpll_matches_brute
+60042,6,24,True,False,False,True

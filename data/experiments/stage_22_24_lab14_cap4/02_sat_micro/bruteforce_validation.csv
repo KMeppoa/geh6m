@@ -1,0 +1,9 @@
+formula_seed,n_vars,n_clauses,brute_checked,brute_sat,dpll_success,dpll_matches_brute
+220042,22,88,False,,True,
+220043,22,88,False,,True,
+220044,22,88,False,,True,
+220045,22,88,False,,True,
+240042,24,96,False,,True,
+240043,24,96,False,,True,
+240044,24,96,False,,True,
+240045,24,96,False,,True,

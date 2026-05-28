@@ -1,0 +1,143 @@
+SAT chronology: from P vs NP to reserve-aware SAT recursion
+
+Sources:
+    - Claude share: https://claude.ai/share/8d4b8fc3-03b6-4699-b86f-f7139792d22e
+    - ChatGPT share: https://chatgpt.com/share/6a137519-7318-83eb-b896-db145b7cecdc
+
+Note:
+    I could not directly fetch the shared pages here, so this chronology is reconstructed
+    from the workspace docs and the live chat state.
+
+1. Origin: P vs NP
+------------------
+The original motivation was the P vs NP question.
+The intuition was:
+    - NP problems often look hard because local choices hide global consequences
+    - if we can represent the "right" global consequences compactly, search might improve
+
+This produced the L/G framework:
+    - L = local picture of the current state
+    - G = global or forced consequences of that choice
+
+2. First formal hypothesis
+--------------------------
+The early hypothesis was not "SAT is solved".
+It was:
+    - local greedy information is incomplete
+    - a global expansion step can expose hidden forced structure
+    - combining L with G should outperform L alone
+
+In short:
+    L sees what is immediately available.
+    G sees what that choice causes next.
+
+3. First experiments on NP tasks
+---------------------------------
+Before the reserve work, the idea was tested on several NP-style tasks:
+    - SAT
+    - Graph Coloring
+    - Labyrinth / guided search
+    - Independent Set, Clique, Vertex Cover
+    - Set Cover, Exact Cover, Subset Sum, N-Queens, Hamiltonian Path, and others
+
+The repeated pattern was:
+    - L-only strategies often got trapped
+    - LG-style strategies found more forced structure and reduced dead ends
+
+4. Main empirical message
+-------------------------
+The project began to converge on these claims:
+    - G beats L on tested tasks
+    - D = H / useful_IG works as a predictor
+    - danger_rate stays roughly constant around 3-4% across levels and n
+    - recursive clustering reduces D
+
+This is the bridge from the abstract P vs NP motivation into the SAT recursion work.
+
+5. SAT focus and recursive scaling
+----------------------------------
+The SAT experiments became the clearest place to study the idea.
+The observed problem:
+    - at larger n, deeper clusters become too large
+    - level 5 can lose IG relative to level 4
+
+Example symptom:
+    - n=2000, level5 IG=38 < level4 IG=42
+
+That created the next question:
+    can we recover lost usefulness with a memory mechanism?
+
+6. Reserve-loss idea
+--------------------
+This introduced reserve:
+    base_useful_IG = IG * (1 - danger_rate)
+    loss = IG * danger_rate
+    reserve[var] += part of loss for dangerous variables
+
+Recovery:
+    recovered = (0.5 ^ level) * overlap * reserve_score
+    useful_IG_reserve = base_useful_IG + recovered
+    cap: recovered <= IG
+
+Reserve is memory, not fuel:
+    it should not shrink after use.
+
+7. First failure and the key fix
+--------------------------------
+The first reserve-loss probe failed in a specific way:
+    - reserve_total could grow
+    - but recovered was often near zero
+    - overlap was often 0
+
+Why?
+    reserve and cluster construction were independent
+
+So the next fix was:
+    make clustering reserve-aware
+
+Meaning:
+    when building clusters, prefer units with higher reserve_score
+
+Implementation idea:
+    cluster merge priority = co-occurrence signal + reserve_score bias
+
+8. Another important correction
+-------------------------------
+We also fixed the comparison itself:
+    baseline and reserve must use the same sampled candidates
+
+Otherwise the result is noisy and the reserve effect is not trustworthy.
+
+So the probe now has:
+    - paired baseline vs reserve comparison
+    - paired summary output
+
+9. Current state
+----------------
+Files:
+    sat_recursive_cluster_levels.py
+    sat_reserve_loss_probe.py
+
+Current test:
+    n = 1000, 2000
+    levels = 1..5
+
+What we now want to see:
+    - reserve_useful_IG > baseline_useful_IG at levels 4-5
+    - reserve_D_pred < baseline_D_pred
+    - positive delta_useful_IG in paired summary
+
+10. Where the idea currently stands
+-----------------------------------
+The full story is:
+    - it started as a P vs NP / L-vs-G intuition
+    - it became an empirical framework for many NP tasks
+    - SAT gave the strongest quantitative signal
+    - recursive SAT clustering worked
+    - reserve-loss was introduced to handle level-5 degradation
+    - reserve-aware clustering is the current attempt to make reserve actually help
+
+So the current question is not "is P = NP?"
+It is:
+    can a compact global-guidance mechanism systematically beat purely local search on NP problems?
+

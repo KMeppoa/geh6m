@@ -1,0 +1,6 @@
+n,seed,level,IG,danger_rate,avg_freedom,useful_IG,D,IG_after_rebuild,danger_rate_after_rebuild,useful_IG_after_rebuild,D_after_rebuild,sample_units,candidate_cap,top_neighbors,min_useful_growth,topdown_bias,affected_clauses,dangerous_clauses,forced,avg_forced_per_assignment,chosen_unit_size,rebuilt,rebuild_triggered,trigger_level,trigger_reason,ratio_54,ratio_43,useful_IG_G3,useful_IG_G4,useful_IG_G5,baseline_D,after_D,improvement_ratio,runtime_seconds
+100,100042,1,1,0.0,0.0,1.0,100.0,,,,,100,100,16,1.05,5.0,6,0,0,0.0,1,False,False,,,1.0,1.0,1.0,1.0,1.0,100.0,,,0.02541270002257079
+100,100042,2,1,0.0,0.0,1.0,100.0,,,,,100,100,16,1.05,5.0,6,0,0,0.0,1,False,False,,,1.0,1.0,1.0,1.0,1.0,100.0,,,0.02541270002257079
+100,100042,3,1,0.0,0.0,1.0,100.0,,,,,100,100,16,1.05,5.0,6,0,0,0.0,1,False,False,,,1.0,1.0,1.0,1.0,1.0,100.0,,,0.02541270002257079
+100,100042,4,1,0.0,0.0,1.0,100.0,1,0.0,1.0,100.0,100,100,16,1.05,5.0,6,0,0,0.0,1,True,True,4,weak_growth,1.0,1.0,1.0,1.0,1.0,100.0,100.0,1.0,0.02541270002257079
+100,100042,5,1,0.0,0.0,1.0,100.0,1,0.0,1.0,100.0,100,100,16,1.05,5.0,6,0,0,0.0,1,True,True,4,weak_growth,1.0,1.0,1.0,1.0,1.0,100.0,100.0,1.0,0.02541270002257079

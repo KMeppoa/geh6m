@@ -1,0 +1,4 @@
+map_seed,bfs_has_path,bfs_path_len
+42,True,10
+43,True,10
+44,True,14

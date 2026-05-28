@@ -1,0 +1,6 @@
+mode,total,success,fail,success_rate,avg_steps_success_only,avg_steps_all,min_steps_success,max_steps_success
+guided_1,500,20,480,0.04,56.0,31.38,54,58
+guided_2,500,200,300,0.4,56.6,468.2,40,76
+guided_3,500,350,150,0.7,60.97142857142857,170.6,38,112
+guided_5,500,400,100,0.8,59.1,209.16,38,284
+random,500,116,384,0.232,146.29310344827587,76.46,72,302

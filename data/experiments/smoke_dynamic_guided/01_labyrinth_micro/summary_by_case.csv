@@ -1,0 +1,7 @@
+case_id,map_seed,mode,success,steps,path_len
+map_42_trial_0,42,random,False,4,5
+map_43_trial_0,43,random,True,16,17
+map_44_trial_0,44,random,False,25,26
+map_42_guided_1,42,guided_1,True,10,11
+map_43_guided_1,43,guided_1,True,10,11
+map_44_guided_1,44,guided_1,True,14,15

@@ -1,0 +1,11 @@
+case,seed,greedy_L_status,greedy_L_success,greedy_L_steps,greedy_L_decision_steps,greedy_L_forced_steps,greedy_L_score_calls,greedy_LG_status,greedy_LG_success,greedy_LG_steps,greedy_LG_decision_steps,greedy_LG_forced_steps,greedy_LG_score_calls,lookahead_L_2_status,lookahead_L_2_success,lookahead_L_2_steps,lookahead_L_2_decision_steps,lookahead_L_2_forced_steps,lookahead_L_2_score_calls,lookahead_LG_2_status,lookahead_LG_2_success,lookahead_LG_2_steps,lookahead_LG_2_decision_steps,lookahead_LG_2_forced_steps,lookahead_LG_2_score_calls
+0,43,SAT_FOUND,True,24,24,0,753,SAT_FOUND,True,1,1,23,37,SAT_FOUND,True,24,24,0,30209,SAT_FOUND,True,3,3,21,2558
+1,44,SAT_FOUND,True,24,24,0,837,SAT_FOUND,True,2,2,22,77,SAT_FOUND,True,24,24,0,37744,SAT_FOUND,True,3,3,21,6404
+2,45,SAT_FOUND,True,24,24,0,835,SAT_FOUND,True,2,2,22,81,SAT_FOUND,True,24,24,0,38234,SAT_FOUND,True,5,5,19,7086
+3,46,SAT_FOUND,True,24,24,0,822,SAT_FOUND,True,1,1,23,61,SAT_FOUND,True,24,24,0,36700,SAT_FOUND,True,2,2,22,3801
+4,47,SAT_FOUND,True,24,24,0,802,SAT_FOUND,True,1,1,23,64,SAT_FOUND,True,24,24,0,34250,SAT_FOUND,True,6,6,18,9810
+5,48,FAILED_TO_FIND,False,45,22,0,713,SAT_FOUND,True,1,1,23,52,FAILED_TO_FIND,False,45,22,0,29623,SAT_FOUND,True,4,4,20,6470
+6,49,SAT_FOUND,True,24,24,0,819,SAT_FOUND,True,2,2,22,104,SAT_FOUND,True,24,24,0,36412,SAT_FOUND,True,3,3,21,6236
+7,50,SAT_FOUND,True,24,24,0,779,SAT_FOUND,True,2,2,22,106,SAT_FOUND,True,24,24,0,33505,SAT_FOUND,True,3,3,21,9635
+8,51,SAT_FOUND,True,24,24,0,840,SAT_FOUND,True,2,2,22,104,SAT_FOUND,True,24,24,0,39462,SAT_FOUND,True,2,2,22,7495
+9,52,SAT_FOUND,True,24,24,0,831,SAT_FOUND,True,1,1,23,54,SAT_FOUND,True,24,24,0,36546,SAT_FOUND,True,4,4,20,5117

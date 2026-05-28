@@ -1,0 +1,10 @@
+source_file,n_vars,H_start,depth,dpll_sat,dpll_unsat,success,success_rate,avg_IG_all,avg_IG_success,H_after_success,avg_decision_success,D_pred_H_over_IG,D_pred_ceil
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n12_summary_by_formula.csv,12,12,1,8,2,7,0.875,6.75,7.428571428571429,4.571428571428571,2.5714285714285716,1.6153846153846154,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n12_summary_by_formula.csv,12,12,2,8,2,8,1.0,6.875,6.875,5.125,4.375,1.7454545454545454,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n12_summary_by_formula.csv,12,12,3,8,2,8,1.0,6.25,6.25,5.75,4.875,1.92,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n14_summary_by_formula.csv,14,14,1,9,1,9,1.0,10.777777777777779,10.777777777777779,3.2222222222222214,2.3333333333333335,1.2989690721649483,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n14_summary_by_formula.csv,14,14,2,9,1,9,1.0,8.88888888888889,8.88888888888889,5.111111111111111,5.0,1.575,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n14_summary_by_formula.csv,14,14,3,9,1,9,1.0,8.88888888888889,8.88888888888889,5.111111111111111,5.0,1.575,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n16_summary_by_formula.csv,16,16,1,6,4,5,0.8333333333333334,11.0,12.6,3.4000000000000004,3.0,1.2698412698412698,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n16_summary_by_formula.csv,16,16,2,6,4,6,1.0,9.5,9.5,6.5,5.666666666666667,1.6842105263157894,2
+experiments\guided_depth_growth_sat_phase_step1\sat_phase_n16_summary_by_formula.csv,16,16,3,6,4,6,1.0,9.333333333333334,9.333333333333334,6.666666666666666,6.0,1.7142857142857142,2

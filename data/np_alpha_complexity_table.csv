@@ -1,0 +1,13 @@
+task,pressure,actual_danger,predicted_danger,alpha,known_hardness,has_approximation,has_fpt,predicted_class,note
+2SAT_r1,1.0,0.27777777777777773,174.33333333333334,0.001593371574251115,1,yes,yes,weak NP,P; polynomial 2-SAT
+2SAT_r4p27,4.27,0.047619047619047616,4.27,0.011152001784320286,1,yes,yes,weak NP,"P; polynomial 2-SAT, overconstrained ratio point"
+Clique,0.08,0.2920294406587765,3.2124778437696753,0.09090473300077151,3,no,yes,weak NP,NP-complete; hard to approximate
+ExactCover,1.5,0.0,0.0,0.0,2,no,yes,P-like,NP-complete
+GraphColoring,4.0,0.0463070256543439,0.2009538955706105,0.2304360685462437,3,limited,yes,strong NP,NP-complete; k fixed is hard for k>=3
+HamiltonianPath,2.0,0.7502063059980906,1.30679708746181,0.5740801790851976,3,no,no,strong NP,NP-complete; very hard
+IndependentSet,2.0,0.223806344835449,1.848848068980515,0.12105177736906175,3,no,yes,strong NP,NP-complete; hard to approximate
+NQueens,1.0,0.0,0.0,0.0,1,n/a,n/a,P-like,alpha=0; not classical NP-complete decision task
+3SAT,4.27,0.0379032484693065,1.4573209265423999,0.02600885486440843,3,no,no,weak NP,NP-complete; sharp phase transition
+SetCover,1.5,0.0,0.0,0.0,1,log,yes,P-like,NP-complete; logarithmic approximation
+SubsetSum,0.0983482028457521,0.0,0.0,0.0,1,pseudo-poly,yes,P-like,alpha=0 but formally NP-complete; pseudopolynomial
+VertexCover,4.0,0.2313846925126595,3.060775862068965,0.07559674505412901,2,yes,yes,weak NP,NP-complete; good approximation and FPT

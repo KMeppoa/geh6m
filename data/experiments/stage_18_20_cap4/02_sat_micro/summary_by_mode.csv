@@ -1,0 +1,7 @@
+mode,total,success,fail,success_rate,avg_steps_all,avg_steps_success_only,avg_decision_steps,avg_forced_steps,avg_score_calls
+dpll_control,10,8,2,0.8,13.3,11.125,13.3,1.5,0.0
+greedy_L,10,3,7,0.3,17.0,12.666666666666666,17.0,0.0,367.1
+greedy_LG,10,3,7,0.3,11.6,3.6666666666666665,6.9,9.1,155.7
+lookahead_LG_2,10,8,2,0.8,7.1,5.375,5.8,11.5,5068.2
+lookahead_L_2,10,3,7,0.3,17.8,16.666666666666668,17.8,0.0,11011.0
+random,10,0,10,0.0,19.0,,19.0,0.0,0.0

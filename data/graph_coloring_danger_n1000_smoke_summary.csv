@@ -1,0 +1,3 @@
+n,level,samples,avg_danger_rate,avg_IG,avg_useful_IG,avg_D,avg_affected_edges,avg_dangerous_edges
+1000,4,1,0.02666666666666667,33.0,32.120000000000005,31.1332503113325,75.0,2.0
+1000,5,1,0.02,41.0,40.18,24.888003982080637,100.0,2.0

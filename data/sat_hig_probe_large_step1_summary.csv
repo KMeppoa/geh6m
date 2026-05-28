@@ -1,0 +1,4 @@
+n_vars,samples,non_conflict_samples,H_start,avg_H_before,avg_IG_total,avg_IG_G_only,D_pred_total,D_pred_G_only,conflicts
+1000,2,2,1000,999.5,1.5,0.5,666.6666666666666,2000.0,0
+3000,2,2,3000,2999.5,1.0,0.0,3000.0,,0
+10000,2,2,10000,9999.5,1.0,0.0,10000.0,,0

@@ -1,0 +1,15 @@
+label,depth,total,success,success_rate
+graph_coloring,2,60,54,0.9
+graph_coloring,3,60,54,0.9
+is_clique,2,120,120,1.0
+is_clique,3,120,119,0.9916666666666667
+vertex_cover,2,30,30,1.0
+vertex_cover,3,30,30,1.0
+subset_sum,2,40,39,0.975
+subset_sum,3,40,40,1.0
+n_queens,2,9,5,0.5555555555555556
+n_queens,3,9,6,0.6666666666666666
+n_queens_dynamic,1,5,1,0.2
+n_queens_dynamic,2,5,3,0.6
+n_queens_dynamic,3,5,4,0.8
+n_queens_dynamic,4,5,5,1.0

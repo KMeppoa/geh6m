@@ -1,0 +1,4 @@
+source_file,n_vars,H_start,dpll_sat,dpll_unsat,D_real_first_depth_100
+experiments\guided_depth_growth_sat_phase_step2_bigger\sat_phase_n18_summary_by_formula.csv,18,18,3,2,2
+experiments\guided_depth_growth_sat_phase_step2_bigger\sat_phase_n20_summary_by_formula.csv,20,20,5,0,2
+experiments\guided_depth_growth_sat_phase_step2_bigger\sat_phase_n22_summary_by_formula.csv,22,22,2,3,2

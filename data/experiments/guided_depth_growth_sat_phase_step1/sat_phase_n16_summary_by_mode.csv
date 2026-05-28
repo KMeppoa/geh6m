@@ -1,0 +1,11 @@
+mode,total,success,fail,skipped,sat_found,unsat_proved,timeout,failed_to_find,success_rate,avg_steps_success_only,avg_steps_all,avg_steps_non_skipped,avg_decision_steps,avg_forced_steps,avg_score_calls,min_steps_success,max_steps_success
+dpll_control,10,6,4,0,6,4,0,0,0.6,8.5,10.5,10.5,10.5,1.1,0.0,4,17
+greedy_L,10,3,7,0,3,0,0,7,0.3,12.333333333333334,14.6,14.6,14.6,0.0,265.7,11,13
+greedy_LG,10,5,5,0,5,0,0,5,0.5,3.0,7.4,7.4,5.4,8.3,117.2,2,4
+lookahead_LG_1,10,5,5,0,5,0,0,5,0.5,3.0,7.4,7.4,5.4,8.3,117.2,2,4
+lookahead_LG_2,10,6,4,0,6,0,0,4,0.6,5.666666666666667,8.6,8.6,7.5,6.8,3273.2,2,9
+lookahead_LG_3,10,6,4,0,6,0,0,4,0.6,6.0,8.4,8.4,7.6,6.4,16649.4,4,8
+lookahead_L_1,10,3,7,0,3,0,0,7,0.3,12.333333333333334,14.6,14.6,14.6,0.0,265.7,11,13
+lookahead_L_2,10,4,6,0,4,0,0,6,0.4,15.75,15.1,15.1,15.1,0.0,6756.9,15,16
+lookahead_L_3,10,4,6,0,4,0,0,6,0.4,15.75,14.9,14.9,14.9,0.0,30388.4,15,16
+random,10,0,10,0,0,0,0,10,0.0,,16.0,16.0,16.0,0.0,0.0,,

@@ -1,0 +1,5 @@
+mode,total,success,fail,success_rate,avg_decision_steps,avg_forced_steps,avg_score_calls
+lookahead_LG_1,5,1,4,0.2,5.8,1.2,32.2
+lookahead_LG_2,5,3,2,0.6,5.8,2.6,249.8
+lookahead_LG_3,5,4,1,0.8,5.6,3.8,541.2
+lookahead_LG_4,5,5,0,1.0,5.8,4.2,999.6

@@ -1,0 +1,213 @@
+SAT reserve experiment: full idea history and key chat dialogue
+
+1. Where the idea started
+-------------------------
+The project is about recursive scaling for SAT tasks.
+The core observation before reserve was:
+
+    - G is better than L on all tested tasks
+    - D = H / useful_IG works as a predictor
+    - danger_rate stays roughly constant at 3-4% across levels and n
+    - recursive clusters reduce D
+
+The problem that triggered the reserve idea:
+
+    - at larger n, level-5 clusters become too large
+    - IG can drop at level 5
+      example: n=2000, level5 IG=38 < level4 IG=42
+
+So the question became:
+
+    When IG drops on the deeper level, can a reserve mechanism recover useful_IG?
+
+2. First reserve-loss formulation
+---------------------------------
+The first reserve model was:
+
+    base_useful_IG = IG * (1 - danger_rate)
+    loss = IG * danger_rate
+    reserve[var] += part of loss for dangerous variables
+
+Recovery:
+
+    recovered = (0.5 ^ level) * overlap * reserve_score
+    useful_IG_reserve = base_useful_IG + recovered
+
+with the cap:
+
+    recovered <= IG
+
+The idea behind reserve:
+
+    - reserve is memory, not fuel
+    - reserve should not be decreased after use
+    - reserve should represent accumulated loss that can later help recovery
+
+3. Important dialogue: what should the cap be?
+----------------------------------------------
+One key discussion was about the cap for recovery.
+
+Initial thought:
+
+    recovered <= base_useful_IG
+
+Then the correction:
+
+    recovered <= IG
+
+Reason:
+
+    reserve restores the lost part of the original compression,
+    so the natural ceiling is the original IG, not just the already-safe useful part
+
+This was a real turning point in the formulation.
+
+4. The first failure mode
+-------------------------
+The first reserve-loss probe showed a weak effect:
+
+    - reserve_total could grow
+    - but recovered was often near zero
+    - on n=2000, level 5, reserve often did not help
+
+The main reason discovered:
+
+    overlap = 0 or almost 0
+
+Why?
+
+    reserve and cluster construction were independent
+
+That meant:
+
+    - reserve existed
+    - but the next clusters were not being drawn toward the variables that carried reserve mass
+    - therefore the reserve could not “meet” the dangerous variables again
+
+5. Important dialogue: what to fix?
+-----------------------------------
+The next key idea in the chat was:
+
+    use reserve_score during cluster construction
+
+Not only during evaluation of a chosen cluster.
+
+The intended logic:
+
+    - when choosing which variables / units to merge into a cluster,
+      prefer those with higher reserve_score
+
+Expected result:
+
+    - clusters should start containing dangerous variables
+    - overlap should increase
+    - recovered should become non-zero and meaningful
+
+6. Reserve-aware clustering design
+----------------------------------
+The chosen implementation direction was a soft bias, not a hard replacement:
+
+    cluster merge priority = co-occurrence signal + reserve_score bias
+
+In practice this means:
+
+    adjusted = cooccur_count + reserve_bias * (score_a + score_b)
+
+And we still keep the structural rule:
+
+    eligible edges are filtered by min_cooccur first
+
+So the reserve does not replace structure.
+It nudges structure toward variables that already have memory.
+
+7. Important dialogue: baseline vs reserve must be paired
+---------------------------------------------------------
+Another important correction in the chat:
+
+    baseline and reserve must see the same sampled candidates
+
+Why this mattered:
+
+    if the sampled units differ, then any difference in useful_IG could just be random noise
+
+So the probe was adjusted so that:
+
+    - baseline and reserve use the same sampled candidate set
+    - a paired summary is written for direct comparison
+
+This makes the comparison much more trustworthy.
+
+8. The current code state
+-------------------------
+Files involved:
+
+    sat_recursive_cluster_levels.py
+    sat_reserve_loss_probe.py
+
+What changed:
+
+    - build_next_level now accepts:
+        unit_scores=None
+        reserve_bias=0.0
+
+    - in reserve mode, unit_scores are computed from current reserve
+    - those scores are passed into cluster construction
+    - reserve_bias is used only in reserve mode
+    - paired summary file is generated
+
+Current CLI option:
+
+    --reserve-bias 0.35
+
+Current test command:
+
+    python sat_reserve_loss_probe.py --sizes 1000 2000 --formulas 3 --max-levels 5 --min-cooccur 2 --base-max-cluster-size 8 --sample-units 500 --beta 0.5 --reserve-bias 0.35 --out-prefix sat_reserve_loss_probe_step2
+
+9. What to look for in results
+------------------------------
+The reserve idea is successful if, at levels 4-5:
+
+    reserve_useful_IG > baseline_useful_IG
+    reserve_D_pred < baseline_D_pred
+    delta_useful_IG is positive in the paired summary
+
+If it still fails, the next fallback ideas were:
+
+    - increase reserve_bias
+    - make reserve affect merge order more strongly
+    - let reserve influence candidate ranking too, not only clustering
+
+10. Short dialogue summary
+--------------------------
+The chat moved through these exact conceptual steps:
+
+    - "recovered should be capped by IG"
+    - "overlap is 0 because reserve and clusters are independent"
+    - "use reserve_score while building clusters"
+    - "prefer variables with high reserve_score when merging"
+    - "baseline and reserve must be compared on the same sampled candidates"
+    - "we need a checkpoint so the next run can continue immediately"
+
+11. Current checkpoint meaning
+------------------------------
+At this point the research is not "reserve is proven".
+The real status is:
+
+    - the reserve-loss idea is implemented
+    - the cluster builder is now reserve-aware
+    - the next run should test whether this increases overlap and recovers useful_IG on level 5
+
+12. Best files to open first
+----------------------------
+
+    checkpoint_full.md
+    CHECKPOINT_FULL_SAT_RESERVE_LOSS.md
+    SAT_RESERVE_STRUCTURE_IDEA_CHECKPOINT.txt
+    sat_reserve_loss_probe.py
+    sat_recursive_cluster_levels.py
+
+13. Note about the Claude share link
+------------------------------------
+The shared Claude link was not accessible directly from this environment.
+So this file is reconstructed from the actual chat and workspace state.
+

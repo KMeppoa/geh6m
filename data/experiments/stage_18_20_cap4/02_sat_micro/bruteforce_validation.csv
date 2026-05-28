@@ -1,0 +1,11 @@
+formula_seed,n_vars,n_clauses,brute_checked,brute_sat,dpll_success,dpll_matches_brute
+180042,18,72,False,,True,
+180043,18,72,False,,True,
+180044,18,72,False,,False,
+180045,18,72,False,,True,
+180046,18,72,False,,True,
+200042,20,80,False,,False,
+200043,20,80,False,,True,
+200044,20,80,False,,True,
+200045,20,80,False,,True,
+200046,20,80,False,,True,

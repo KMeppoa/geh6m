@@ -1,0 +1,5 @@
+seed,n_vars,n_clauses,ratio,cluster_count,non_singleton_clusters,max_cluster_size_seen,avg_cluster_size,H_var_start,H_cluster_start,H_var_after_G1,H_cluster_after_G1,H_var_after_G2,H_cluster_after_G2,IG_var_G1,IG_cluster_G1,IG_var_G2,IG_cluster_G2,forced_G1,forced_G2,chosen_cluster_size,conflict_G1,conflict_G2
+500042,500,2135,4.27,354,73,8,1.4124293785310735,500,354,499,354,491,353,1,0,9,1,0,1,8,False,False
+500043,500,2135,4.27,328,81,8,1.524390243902439,500,328,499,328,488,324,1,0,12,4,0,4,8,False,False
+1000042,1000,4270,4.27,813,126,6,1.2300123001230012,1000,813,999,813,992,811,1,0,8,2,0,4,4,False,False
+1000043,1000,4270,4.27,842,102,8,1.187648456057007,1000,842,999,841,990,839,1,1,10,3,0,3,7,False,False

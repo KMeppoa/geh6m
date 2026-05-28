@@ -1,0 +1,1 @@
+case_id,formula_seed,n_vars,n_clauses,mode,success,direct_verified,steps,assigned_count,decision_steps,forced_steps,score_calls,dpll_nodes

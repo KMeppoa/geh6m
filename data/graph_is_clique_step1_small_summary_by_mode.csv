@@ -1,0 +1,13 @@
+task,mode,total,success,fail,success_rate,avg_decision_steps,avg_forced_steps,avg_score_calls
+clique,greedy_L,20,1,19,0.05,2.35,0.0,20.8
+clique,greedy_LG,20,9,11,0.45,2.6,1.5,21.5
+clique,lookahead_LG_2,20,20,0,1.0,2.9,2.1,161.85
+clique,lookahead_LG_3,20,20,0,1.0,2.9,2.1,402.45
+clique,lookahead_L_2,20,15,5,0.75,4.6,0.0,213.45
+clique,lookahead_L_3,20,18,2,0.9,4.9,0.0,521.6
+independent_set,greedy_L,20,17,3,0.85,4.85,0.0,31.15
+independent_set,greedy_LG,20,17,3,0.85,3.7,1.15,29.75
+independent_set,lookahead_LG_2,20,20,0,1.0,4.6,0.4,444.05
+independent_set,lookahead_LG_3,20,20,0,1.0,4.65,0.35,1567.7
+independent_set,lookahead_L_2,20,19,1,0.95,4.95,0.0,439.95
+independent_set,lookahead_L_3,20,20,0,1.0,5.0,0.0,1559.25

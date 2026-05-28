@@ -1,0 +1,4 @@
+n_vars,clauses,ratio,dpll_sat,dpll_unsat,first_depth_100
+12,51,4.25,8,2,2
+14,60,4.285714285714286,9,1,1
+16,68,4.25,6,4,2

@@ -1,0 +1,5 @@
+mode,total,success,fail,success_rate,avg_steps_success,avg_decision_steps,avg_forced_steps,avg_score_calls
+greedy_L,5,5,0,1.0,15.0,15.0,0.0,240.4
+greedy_LG,5,5,0,1.0,0.6,0.6,14.4,14.8
+lookahead_LG_2,5,5,0,1.0,1.0,1.0,14.0,446.4
+lookahead_L_2,5,5,0,1.0,15.0,15.0,0.0,4897.0

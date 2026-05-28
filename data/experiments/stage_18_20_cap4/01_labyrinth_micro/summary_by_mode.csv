@@ -1,0 +1,5 @@
+mode,total,success,fail,success_rate,avg_steps_all,avg_steps_success_only,avg_decision_steps,avg_forced_steps,avg_score_calls
+guided_1,8,1,7,0.125,14.625,28.0,0.0,0.0,0.0
+guided_2,8,4,4,0.5,72.375,32.5,0.0,0.0,0.0
+guided_3,8,5,3,0.625,74.875,35.2,0.0,0.0,0.0
+random,24,6,18,0.25,42.458333333333336,72.0,0.0,0.0,0.0

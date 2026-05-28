@@ -1,0 +1,7 @@
+case_id,formula_seed,n_vars,n_clauses,mode,success,direct_verified,steps,assigned_count,decision_steps,forced_steps,score_calls,dpll_nodes
+sat_n6_seed_60042,60042,6,24,dpll_control,False,False,9,0,9,0,0,9
+sat_n6_seed_60042,60042,6,24,random,False,False,6,6,6,0,0,
+sat_n6_seed_60042,60042,6,24,greedy_L,False,False,6,6,6,0,42,
+sat_n6_seed_60042,60042,6,24,greedy_LG,False,False,6,6,5,1,34,
+sat_n6_seed_60042,60042,6,24,lookahead_L_2,False,False,5,6,5,0,472,
+sat_n6_seed_60042,60042,6,24,lookahead_LG_2,False,False,5,6,5,0,296,
