@@ -1,6 +1,10 @@
+Main document: MASTER_PROJECT_REPORT.md
+
+OSF DOI: https://doi.org/10.17605/OSF.IO/GEH6M
+
 # Empirical Framework for Chain-Forcing Search Depth in NP-Style Problems
 
-Author: Sargis Garibyan
+Author: S.G.
 
 Status: master project report, not a final theory paper.
 
